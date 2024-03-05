@@ -11,7 +11,24 @@
 
 // Write our function (we must define it too!) below
 // ...
-
+//Define the function
+const joinList = function (array) {
+  //Declare a variable to store the concepts
+  let concepts = "";
+  //Iterate over array using for loop
+  for (let i = 0; i < array.length; i++) {
+    //Add comma to the concept if it is not the last concept in the array
+    if (i !== array.length - 1) {
+      concepts += array[i] + ", "
+    } else {
+      //Otherwise add the concept without a comma
+      concepts += array[i]
+    }
+  }
+  
+  //Return an output of concepts
+  return concepts; 
+}
 // Test / Driver Code below...
 const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
 const concepts = joinList(conceptList);
